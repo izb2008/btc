@@ -15,6 +15,45 @@
 <head>
     <title>Title</title>
     <meta charset="UTF-8">
+    <%--<style>--%>
+        <%--.portDetailWrap>p{--%>
+            <%--width: 9.2rem;--%>
+            <%--height: 1.6rem;--%>
+            <%--font-weight: bold;--%>
+            <%--box-sizing: border-box;--%>
+            <%--padding: 0 0.4rem;--%>
+            <%--display: -webkit-box;--%>
+            <%--display: flex;--%>
+            <%--display: -webkit-flex;--%>
+            <%---webkit-box-pack: justify;--%>
+            <%--justify-content: space-between;--%>
+            <%---webkit-justify-content: space-between;--%>
+            <%---webkit-box-align: center;--%>
+            <%--align-items: center;--%>
+            <%---webkit-align-items: center;--%>
+            <%--background: #dde2e9;--%>
+            <%--color: #535860;--%>
+        <%--}--%>
+        <%--.portUl>li{--%>
+            <%--width: 9.2rem;--%>
+            <%--height: 1.6rem;--%>
+            <%--color: #828b97;--%>
+            <%--box-sizing: border-box;--%>
+            <%--padding: 0 0.4rem;--%>
+            <%--display: -webkit-box;--%>
+            <%--display: flex;--%>
+            <%--display: -webkit-flex;--%>
+            <%---webkit-box-pack: justify;--%>
+            <%--justify-content: space-between;--%>
+            <%---webkit-justify-content: space-between;--%>
+            <%---webkit-box-align: center;--%>
+            <%--align-items: center;--%>
+            <%---webkit-align-items: center;--%>
+        <%--}--%>
+        <%--.portUl>li:nth-of-type(even){--%>
+            <%--background: #dde2e9;--%>
+        <%--}--%>
+    <%--</style>--%>
 </head>
 <body>
     <div>
