@@ -1,33 +1,46 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="<%=basePath%>css/mystyle.css" charset="UTF-8"/>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <%--<script type="text/javascript">--%>
+        <%--$(document).ready(function(){--%>
+            <%--alert("<%=path%>");--%>
+            <%--alert("<%=basePath%>")--%>
+        <%--})--%>
+    <%--</script>--%>
     <meta charset="UTF-8">
-    <style>
-        #red {color:red;}
-        #green {color:green;}
-        li strong {
-            font-style:italic;
-            font-weight:normal;
-        }
+    <%--<style>--%>
 
-        strong {
-            color:red;
-        }
-        h2 {
-            color:red;
-        }
-        h2 strong {
-            color:blue;
-        }
+        <%--#green {color:green;}--%>
+        <%--li strong {--%>
+            <%--font-style:italic;--%>
+            <%--font-weight:normal;--%>
+        <%--}--%>
 
-        #sidebar p {
-            font-style:italic;
-            text-align:right;
-            margin-top:0.5em;
-        }
+        <%--strong {--%>
+            <%--color:red;--%>
+        <%--}--%>
+        <%--h2 {--%>
+            <%--color:red;--%>
+        <%--}--%>
+        <%--h2 strong {--%>
+            <%--color:blue;--%>
+        <%--}--%>
 
-        .center {text-align:center}
-    </style>
+        <%--#sidebar p {--%>
+            <%--font-style:italic;--%>
+            <%--text-align:right;--%>
+            <%--margin-top:0.5em;--%>
+        <%--}--%>
+
+        <%--.center {text-align:center}--%>
+    <%--</style>--%>
 </head>
 <body>
 <%--<meta http-equiv="Refresh" content="0; URL=home/BTC">--%>

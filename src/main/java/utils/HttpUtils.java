@@ -13,9 +13,10 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 public class HttpUtils {
-    private final static OkHttpClient client = new OkHttpClient();
+    private final static OkHttpClient client = new OkHttpClient().newBuilder().connectTimeout(1, TimeUnit.SECONDS).readTimeout(1, TimeUnit.SECONDS).build();
 
     /**
      * okhttp post方法

@@ -21,7 +21,7 @@ public class HomeController {
     @ResponseBody
     public ModelAndView getBtc() {
 //        logger.info("the first jsp pages");
-        ModelAndView mv = new ModelAndView("/model");
+        ModelAndView mv = new ModelAndView("/style-table");
         List<Map<String, Object>> list = Collections.synchronizedList(new ArrayList<Map<String, Object>>());
         List<Map<String, Object>> listNoValue = Collections.synchronizedList(new ArrayList<Map<String, Object>>());
 
@@ -86,7 +86,11 @@ public class HomeController {
         t4.start();
 
         while (t1.isAlive() || t2.isAlive() || t3.isAlive() || t4.isAlive()) {
-
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
         Collections.sort(list, new Comparator<Map<String, Object>>() {
             @Override
@@ -109,7 +113,7 @@ public class HomeController {
     @ResponseBody
     public ModelAndView getLtc() {
 //        logger.info("the first jsp pages");
-        ModelAndView mv = new ModelAndView("/model");
+        ModelAndView mv = new ModelAndView("/style-table");
         ArrayList<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
         List<Map<String, Object>> listNoValue = Collections.synchronizedList(new ArrayList<Map<String, Object>>());
 
@@ -160,7 +164,11 @@ public class HomeController {
         t3.start();
 
         while (t1.isAlive() || t2.isAlive() || t3.isAlive()) {
-
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
         Collections.sort(list, new Comparator<Map<String, Object>>() {
