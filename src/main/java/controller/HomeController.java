@@ -21,7 +21,7 @@ public class HomeController {
     @ResponseBody
     public ModelAndView getBtc() {
 //        logger.info("the first jsp pages");
-        ModelAndView mv = new ModelAndView("/style-table");
+        ModelAndView mv = new ModelAndView("/new");
         List<Map<String, Object>> list = Collections.synchronizedList(new ArrayList<Map<String, Object>>());
         List<Map<String, Object>> listNoValue = Collections.synchronizedList(new ArrayList<Map<String, Object>>());
 

@@ -81,7 +81,5 @@
 
 </table>
 
-<p>Source: Labour Force Survey</p>
-
 </body>
 </html>
