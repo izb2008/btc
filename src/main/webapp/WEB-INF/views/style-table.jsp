@@ -5,6 +5,10 @@
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
+<%
+    //页面每隔30秒自动刷新一遍
+    response.setHeader("refresh","30000000");
+%>
 <%--<html xmlns="http://www.w3.org/1999/xhtml">--%>
 <html>
 <head>
@@ -17,8 +21,9 @@
 
 <body>
 <div>
-    <a href="http://localhost:8080/btc/home/BTC">btc</a>
-    <a href="http://localhost:8080/btc/home/LTC">ltc</a>
+    <a href="<%=basePath%>home/BTC">btc</a>
+    <a href="<%=basePath%>home/LTC">ltc</a>
+    <a href="<%=basePath%>home/ETH">eth</a>
 </div>
 <table id="travel" summary="Travel times to work by main mode (Autumn 2006) - Source: London Travel Report 2007 http://www.tfl.gov.uk/assets/downloads/corporate/London-Travel-Report-2007-final.pdf">
 
@@ -31,9 +36,9 @@
         </tr>
         
         <tr>
-            <th scope="col">金额（USD）</th>
-            <%--<th scope="col">Rest of Inner London</th>--%>
-            <%--<th scope="col">Outer London</th>--%>
+            <th scope="col">金额（CNY）</th>
+            <th scope="col">相差百分比</th>
+            <th scope="col">差额</th>
             <%--<th scope="col">All London</th>--%>
             <%--<th scope="col">Rest of Great Britain</th>--%>
             <%--<th scope="col">Great Britain</th>--%>
@@ -58,6 +63,8 @@
         <tr>
             <th scope="row">${list.name}</th>
             <td>${list.price}</td>
+            <td>${list.percent}</td>
+            <td>${list.difference}</td>
         </tr>
     </c:forEach >
 
@@ -65,6 +72,8 @@
         <tr>
             <th scope="row">${list.name}</th>
             <td>${list.price}</td>
+            <td>${list.percent}</td>
+            <td>${list.difference}</td>
         </tr>
     </c:forEach >
 
