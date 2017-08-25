@@ -13,27 +13,28 @@
     <script type="text/javascript" src="<%=basePath%>js/jquery-1.8.1.js"></script>
     <script type="text/javascript">
         $("#btnId_1").click(function(){
-            $.ajax({
-                type: "GET",
-                url: "http://localhost:8080/btc/homelist/BTC",
-//            contentType:"application/json;charset=utf-8",
-                dataType:"json",
-                success: function(data){
-                    alert( "msg : " + data.list );
-                    var array = new Array();
+            alert("123");
+            <%--$.ajax({--%>
+                <%--type: "GET",--%>
+                <%--url: "http://127.0.0.1:8080/btc/homelist/BTC",--%>
+<%--//            contentType:"application/json;charset=utf-8",--%>
+                <%--dataType:"json",--%>
+                <%--success: function(data){--%>
+                    <%--alert( "msg : " + data.list );--%>
+                    <%--var array = new Array();--%>
 
-//2、通过c标签循环sinList 并生成添加到array的字符串
-                    <c:forEach items="${data.list}" var="a">
-                    array.push(${a}); //生成如 array.push(123)的字符串 这样前台拿到后就是js
-                    </c:forEach>
-                },
-                error:
-                        function(XMLHttpRequest, textStatus, errorThrown) {
-                            alert(XMLHttpRequest.status);
-                            alert(XMLHttpRequest.readyState);
-                            alert(textStatus);
-                        }
-            });
+<%--//2、通过c标签循环sinList 并生成添加到array的字符串--%>
+                    <%--<c:forEach items="${data.list}" var="a">--%>
+                    <%--array.push(${a}); //生成如 array.push(123)的字符串 这样前台拿到后就是js--%>
+                    <%--</c:forEach>--%>
+                <%--},--%>
+                <%--error:--%>
+                        <%--function(XMLHttpRequest, textStatus, errorThrown) {--%>
+                            <%--alert(XMLHttpRequest.status);--%>
+                            <%--alert(XMLHttpRequest.readyState);--%>
+                            <%--alert(textStatus);--%>
+                        <%--}--%>
+            <%--});--%>
         });
 
         $("#btnId_2").click(function(){
@@ -99,7 +100,7 @@
     <%--</tfoot>--%>
 
     <tbody>
-    <c:forEach items="${array}" var="list"  varStatus="i">
+    <c:forEach items="${list}" var="list"  varStatus="i">
         <%--<li><p>${list.name} : ${list.price}</p></li>--%>
         <tr>
             <th scope="row">${list.name}</th>

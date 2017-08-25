@@ -25,9 +25,7 @@
     <a href="<%=basePath%>home/LTC">ltc</a>
     <a href="<%=basePath%>home/ETH">eth</a>
 </div>
-<table id="travel" summary="Travel times to work by main mode (Autumn 2006) - Source: London Travel Report 2007 http://www.tfl.gov.uk/assets/downloads/corporate/London-Travel-Report-2007-final.pdf">
-
-	<caption>Travel patterns in London - Travel times to work by main mode (Autumn 2006) - Minutes</caption>
+<table id="travel">
     
     <thead>    
     	<tr>

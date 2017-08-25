@@ -21,7 +21,7 @@ public class HomeController {
     @ResponseBody
     public ModelAndView getBtc() {
 //        logger.info("the first jsp pages");
-        ModelAndView mv = new ModelAndView("/new");
+        ModelAndView mv = new ModelAndView("/style-table");
         List<Map<String, Object>> list = Collections.synchronizedList(new ArrayList<Map<String, Object>>());
         List<Map<String, Object>> listNoValue = Collections.synchronizedList(new ArrayList<Map<String, Object>>());
 
@@ -361,6 +361,11 @@ public class HomeController {
         mv.addObject("listNoValue", listNoValue);
         mv.addObject("name", "ETH");
         return mv;
+    }
+
+    @RequestMapping("/list")
+    public String getList() {
+        return "new1";
     }
 
     public HashMap<String, Object> get(String url, String name, String param1, String param2) {
